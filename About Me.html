@@ -5,80 +5,177 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css1.css">
     <title>About Me</title>
-    <style>
-
-     .img{
-        width: 30%;
-        height: 30%;
-        margin-left: -160px;
-        margin-top: -40px;
-     }
-     .content1{
-        background-image: url('me.JPG');
-        background-repeat: no-repeat;
-    background-position: center;
-    /* background-attachment: fixed; */
-    background-size: cover;
-        /* display: flex; */
-        height: 400px;
-        justify-content: space-evenly;
-        margin-left: 300px;
-        margin-top: 50px;
-     }
-     .content1 h1{
-        margin-left: -150px;
-        font-size: 70px;
-        color: #F4C542;
-     }
-     .paragraphs{
-        margin: 20px;
-        display: flex;
-     }
-     .paragraphs h3{
-        font-size: 25px;
-        color: #e3ce95;
-     }
-     .paragraphs p{
-
-        color: #ffffff;
-     }
-     .par1{
-
-     }
-     .par2{
+    <style>/* GENERAL STYLING */
+        body {
+            background-color: #5B7553;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
         
-     }
+        /* CONTENT CONTAINER */
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+        
+        /* HERO SECTION */
+        .content1 {
+            background-image: url('me.JPG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            width: 50%;
+            border: 5px solid rgb(245, 222, 179);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 50px auto;
+            overflow: visible;
+            right: -100px;
+        }
+        
+        /* STYLIZED NAME - HALF INSIDE, HALF OUTSIDE IMAGE */
+        .content1 h1 {
+            font-size: 70px;
+            color: #F4C542;
+            position: absolute;
+            top: -20px; /* Moves it slightly above the image */
+            left: -250px; /* Moves it partially outside */
+            white-space: nowrap;
+        }
+        
+        /* SIGNATURE IMAGE */
+        .img {
+            width: 250px;
+            height: auto;
+            margin-top: 200px;
+            margin-left: -200px;
+        }
+        
+        /* ABOUT SECTION */
+        .paragraphs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        
+        .paragraphs div {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+        }
+        
+        .paragraphs h3 {
+            font-size: 22px;
+            color: #e3ce95;
+        }
+        
+        .paragraphs p {
+            color: white;
+            font-size: 16px;
+            padding: 0 10px;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 995px) {
+            .content1 {
+                height: 300px;
+                width: 90%;
+            }
+        
+            .content1 h1 {
+                font-size: 50px;
+                top: -15px;
+                left: -70px;
+            }
+        
+            .img {
+                width: 120px;
+            }
+        
+            .paragraphs {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .paragraphs div {
+                width: 90%;
+            }
+        }
+
+        /* FOOTER STYLES */
+        footer {
+            background-color: #4A5D3B;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+
     </style>
 </head>
-<body class="letters" style="background-color: #5B7553;margin-inline: 100px;">
-    <nav class="navbar-letters">
-        <ul class="nav-links-letters" >
-            <li><a href="van gogh.html" >Home</a></li>
-            <li><a href="biography.html" >Biography</a></li>
-            <li><a href="Paintings.html" >Paintings</a></li>
-            <li><a href="drawings.html" >Drawings</a></li>
+<body>
+    <nav class="navbar">
+        <!-- Hidden checkbox for toggling menu -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        
+        <!-- Label acting as the hamburger menu -->
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <ul class="nav-links">
+            <li><a href="van gogh.html">Home</a></li>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="Paintings.html">Paintings</a></li>
+            <li><a href="drawings.html">Drawings</a></li>
             <li><a href="Letters.html">Letters</a></li>
-            <li><a href="Story.html" >Stories</a></li>
-            <li><a href="About Me.html" >About Me</a></li>
+            <li><a href="Story.html">Stories</a></li>
+            <li><a href="About Me.html">About Me</a></li>
         </ul>
     </nav>
 
-
-   <div class="content">
+    <div class="content">
         <div class="content1">
-            <h1>Mohamed <br><span>El Bouzari</span> </h1>
+            <h1>Mohamed <br><span>El Bouzari</span></h1>
             <img src="signature.png" class="img" alt="">
         </div>
         <div class="paragraphs">
+            <h3>About Me</h3>
+            <p class="par1">I'm <span style="font-size:larger;color: #F4C542;">Mohamed El Bouzari</span>, or Hamada, from Morocco. I’m currently studying a BSc in Computer Science at Griffith College in Ireland. I have 6 months of experience in IT, specifically in web development using Nuxt.js and Laravel. I’m passionate about technology and enjoy working on coding projects. Outside of work and studies, I love staying active with sports like football, surfing, calisthenics, running, and Muay Thai.</p>
+        </div>
+        <div class="paragraphs">
             <div>
-                <h3>About Me</h3>
-                <p class="par1">Vincent van Gogh was born in 1853 in the Netherlands. He showed an early interest in art but initially worked as an art dealer and preacher.</p>
+                <h3>IT Experience</h3>
+                <p class="par1">I have 6 months of experience in IT, primarily focusing on web development with Nuxt.js and Laravel. During this time, I’ve developed strong skills in both front-end and back-end technologies, working on several projects that allowed me to hone my problem-solving abilities and creativity in coding.</p>
             </div>
             <div>
-                <h3>About Me</h3>
-                <p class="par1">Vincent van Gogh was born in 1853 in the Netherlands. He showed an early interest in art but initially worked as an art dealer and preacher.</p>
+                <h3>Languages I Speak</h3>
+                <p class="par1">I speak Moroccan Darija, Arabic, French, and English, with a little bit of Spanish. While I’m not fluent in all of these, my language skills have been important for my studies and in communicating with others in a diverse environment.</p>
+            </div>
+            <div>
+                <h3>Hobbies</h3>
+                <p class="par1">In my free time, I stay active with a variety of sports such as football, surfing, calisthenics, and running. I also practice Muay Thai to keep fit. Additionally, I’m involved in a family-run business that sells vintage jewelry, which allows me to explore my creative side.</p>
             </div>
         </div>
-   </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+     <footer class="footer">
+        <!-- <p>Follow me  on <a href="https://www.instagram.com/bouzari_hamada/" target="_blank">Instagram</a></p> -->
+        <p>&copy; 2025 Mohamed El Bouzari</p>
+    </footer>
+
 </body>
 </html>

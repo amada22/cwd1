@@ -6,6 +6,18 @@
     background-attachment: fixed;
     background-size: cover;
     /* background-color: #DACC98; */
+    box-sizing: border-box;
+}
+
+/* FOOTER STYLES */
+.footer {
+    background-color: #596c4a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .Paintings {
@@ -16,7 +28,6 @@
     background-attachment: fixed;
     background-size: cover;
 }
-
 /* NAVBAR STYLING */
 .navbar {
     display: flex;
@@ -24,6 +35,7 @@
     justify-content: center;  /* Center everything horizontally */
     padding: 10px 50px;
     height: 50px;
+    position: relative; /* Needed for absolute positioning of mobile menu */
 }
 
 /* Navigation Links */
@@ -37,6 +49,49 @@
     align-items: center;
 }
 
+/* RESPONSIVE STYLING */
+@media (max-width: 995px) {
+    .nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #4F7942; /* Dark background for better visibility */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    /* Show menu when checkbox is checked */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* HAMBURGER MENU */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+    
+}
+
+/* Other Navbar Styles */
 .nav-links li {
     display: inline;
 }
@@ -48,7 +103,6 @@
     font-family: 'Courier New', Courier, monospace;
     color: white;
     text-decoration: none;
-    /* font-size: 1rem; */
     padding: 10px 15px;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
@@ -58,25 +112,27 @@
     text-decoration: underline;
 }
 
+/* HIDE CHECKBOX */
+.menu-toggle {
+    display: none;
+}
+
 /* MAIN CONTENT */
 .main {
     text-align: center;
-    /* margin-top: 50px; */
+
 }
 
 .main  {
     width: 100%;
     height: 200px;
-    /* background-color: brown; */
     justify-items: center;
 }
 .header{
-    /* background-image: url(Van_Gogh_-_Starry_Night1.jpg);
-    border-radius: 50%; */
     margin-top: 20px;
+    margin-bottom: 50px;
     width: 400px;
     height: 150px;
-    /* font-family: 'Gotham Rounded SSm', Arial, sans-serif; */
     color: white;
     font-size: 500%;
     font-family: 'Courier New', Courier, monospace;
@@ -168,7 +224,7 @@
 .c4 a{
     color: white;
     text-decoration: none;
-}
+} 
 
 
 .c5{
@@ -202,7 +258,7 @@
 
 body.story {
     margin: 0;
-    background-color: #D19C4C;
+    background-color: #d19c4c;
     /* #D19C4C */
     background-repeat: no-repeat;
     background-position: center;
